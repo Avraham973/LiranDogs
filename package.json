@@ -1,0 +1,35 @@
+{
+  "name": "lirandogtraining",
+  "version": "1.0.0",
+  "description": "liran dog training site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Tal Avraham",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv-extended": "^2.8.0",
+    "@material-ui/core": "^4.9.10",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@trendmicro/react-interpolate": "^0.5.5",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "jss-rtl": "^0.3.0",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-dom": "^16.13.1",
+    "react-gif-loader": "^0.6.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "react-slick": "^0.25.2",
+    "styled-components": "^5.1.0"
+  }
+}
