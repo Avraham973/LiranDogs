@@ -4,16 +4,16 @@
   "description": "liran dog training site",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "server": "nodemon server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "all": "start npm run server-dev && start npm run client-dev",
+    "client-dev": "webpack-dev-server --open",
+    "server-dev": "nodemon --exec babel-node ./server/server.js",
+    "build-dev": "webpack --mode=development",
+    "build-prod": "webpack --mode=production",
+    "debug": "babel-node --inspect ./server/server.js"
   },
   "author": "Tal Avraham",
   "license": "MIT",
   "dependencies": {
-    "dotenv-extended": "^2.8.0",
     "@material-ui/core": "^4.9.10",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -21,8 +21,11 @@
     "@testing-library/user-event": "^7.2.1",
     "@trendmicro/react-interpolate": "^0.5.5",
     "axios": "^0.19.2",
+    "babel-node": "0.0.1-security",
     "bootstrap": "^4.4.1",
+    "dotenv-extended": "^2.8.0",
     "jss-rtl": "^0.3.0",
+    "mongoose": "^5.9.10",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
@@ -31,5 +34,17 @@
     "react-scripts": "^3.4.1",
     "react-slick": "^0.25.2",
     "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.1.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
   }
 }

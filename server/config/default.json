@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://lirandogtraining:R130vEm2d6ROStwx@lirandogtraining-fcbk2.mongodb.net/test?retryWrites=true&w=majority",
-
-  "mongoURI2": "mongodb+srv://lirandogtraining:R130vEm2d6ROStwx@lirandogtraining-fcbk2.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
-}
